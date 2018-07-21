@@ -4,7 +4,7 @@
 import { NgModule } from "@angular/core";
 import { SharedModule } from "../shared/shared.module";
 
-// import { MoviesRoutingModule } from "./movies-routing.module";
+import { MoviesRoutingModule } from "./movies-rounting.module";
 
 import { MovieListComponent } from "./movie-list/list.component";
 import { MovieDetailsComponent } from "./movie/details.component";
