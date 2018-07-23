@@ -16,7 +16,7 @@ import { MovieDetailsComponent } from "./movie/details.component";
         component: MovieListComponent,
       },
       {
-        path: "movies/:id",
+        path: "movie/:id",
         component: MovieDetailsComponent,
       }
     ])

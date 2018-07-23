@@ -1,13 +1,15 @@
 /**
- * This service will make API calls to theMovieDB
+ * This service will make API calls
  */
 import { Injectable } from "@angular/core";
 
-import { Observable } from "rxjs/Observable";
-import { Http } from "@angular/http";
+import { Observable, of } from 'rxjs';
+import { HttpClient } from "@angular/common/http";
 
 import { Movie } from "./movie";
 import { UtilService } from "../../shared/services/util.service";
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';;
 
 @Injectable()
 export class MovieService {
@@ -17,7 +19,7 @@ export class MovieService {
   private latestURL: string;
 
   constructor (
-    private _http: Http,
+    private _http: HttpClient,
     private _util: UtilService
   ) {
     this.baseURL = `${this._util.theMovieDbURL}/movie`;
@@ -32,8 +34,10 @@ export class MovieService {
     }
     url += `?api_key=${this._util.apiKey}`;
     url += `&page=${page}`;
-    return this._http.get(url).map(response => response.json().results).catch(err => {
-      return Observable.of(null);
+    return this._http.get(url).map(response => {
+      console.log("res" ,response)
+    }).catch(err => {
+      return of(null);
     });
   }
 

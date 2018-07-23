@@ -1,3 +1,291 @@
-<p>
-  list-films works!
-</p>
+<style>
+  div.new_stuff_wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
+
+  div.block {
+    display: block;
+    width: 100%;
+    height: 93px;
+    box-sizing: border-box;
+    z-index: 0;
+  }
+
+  div.purple_gradient {
+    background-image: radial-gradient(at 30% top, rgba(31, 40, 73, 1) 0%, rgba(8, 28, 36, 1) 70%);
+  }
+
+  div.inner_content {
+    box-sizing: border-box;
+    width: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  div.purple_gradient div.inner_content {
+    background-position: -40px -500px;
+    background-image: url('../../../../assets/purple-63b164a075461641b7ef444ea97d9787adf45a9552fe215e20063e3ff02491a8.svg');
+  }
+
+  div.inner_content a {
+    color: #fff;
+    transition: all 0.3s;
+  }
+
+  div.purple_gradient a:hover {
+    color: #805be7;
+  }
+
+  div.inner_content h2, div.inner_content p {
+    margin: 0;
+  }
+
+  div.block p a {
+    text-transform: uppercase;
+  }
+
+  div.purple_gradient p a {
+    color: #805be7;
+  }
+</style>
+
+<main id="main" class="">
+  <div class="new_stuff_wrapper">
+    <div class="block purple_gradient">
+      <div class="inner_content">
+        <h2><a href="#">Discussões</a></h2>
+        <p><a href="#">Catch up now.</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="media">
+      <section class="index tv">
+        <h2><a href="#">Na TV</a></h2>
+
+        <!-- <div class="column"> -->
+        <div class="column" *ngFor="let movie of response">
+          {{movie[0].results.title}}
+
+          <div class="info first">
+            <!-- <a [routerLink]="['/movie', movie.id]"> -->
+            <a href="#">
+              <img class="backdrop lazyload fade" data-sizes="auto"
+              src="../assets/qYTIuJJ7fIehicAt3bl0vW70Sq6.jpg"
+              data-src="../assets/qYTIuJJ7fIehicAt3bl0vW70Sq6.jpg"
+              data-srcset="../assets/qYTIuJJ7fIehicAt3bl0vW70Sq6.jpg 1x, ../assets/qYTIuJJ7fIehicAt3bl0vW70Sq6.jpg 2x" alt="The 100">
+            </a>
+            <span>
+
+              <a href="#">
+                <img class="poster lazyload fade" data-sizes="auto"
+                src="../assets/cfhfcEt4bOXuVZkTC0nNBpqqiWb.jpg"
+                data-src="../assets/cfhfcEt4bOXuVZkTC0nNBpqqiWb.jpg"
+                data-srcset="../assets/cfhfcEt4bOXuVZkTC0nNBpqqiWb.jpg 1x, ../assets/cfhfcEt4bOXuVZkTC0nNBpqqiWb.jpg 2x" alt="The 100">
+              </a>
+
+              <div class="content">
+                <a class="text" href="#">
+                  <h3>The 100</h3>
+                </a>
+                <a class="text" alt="Season 5, Episode 11" title="Season 5, Episode 11" href="#">
+                  <p>New episode airs in 3 days</p>
+                </a>
+              </div>
+            </span>
+          </div>
+
+          <div class="info second">
+            <a href="#">
+              <img class="backdrop lazyload fade" data-sizes="auto"
+              src="../assets/7gRvLvHH78YAdchOghNpH2EysJ2.jpg"
+              data-src="../assets/7gRvLvHH78YAdchOghNpH2EysJ2.jpg"
+              data-srcset="../assets/7gRvLvHH78YAdchOghNpH2EysJ2.jpg 1x,
+              ../assets/7gRvLvHH78YAdchOghNpH2EysJ2.jpg 2x" alt="Defesa à Medida">
+            </a>
+            <span>
+              <a class="text" href="#">
+                <h3>Defesa à Medida</h3>
+              </a>
+              <a class="text" alt="Season 8, Episode 2" title="Season 8, Episode 2" href="#">
+                <p>New episode airs in 4 days</p>
+              </a>
+            </span>
+          </div>
+
+          <div class="info third">
+                <a href="#">
+                  <img class="backdrop lazyload fade" data-sizes="auto"
+                  src="../assets/7crHhmTybBvGQ3Y96j4kdQ89ldY.jpg"
+                  data-src="../assets/7crHhmTybBvGQ3Y96j4kdQ89ldY.jpg"
+                  data-srcset="../assets/7crHhmTybBvGQ3Y96j4kdQ89ldY.jpg 1x, ../assets/7crHhmTybBvGQ3Y96j4kdQ89ldY.jpg 2x" alt="The Originals">
+                </a>
+                <span>
+                  <a class="text" href="#">
+                    <h3>The Originals</h3>
+                  </a>
+                  <a class="text" alt="Season 5, Episode 12" title="Season 5, Episode 12" href="#">
+                    <p>New episode airs in 4 days</p>
+                  </a>
+                </span>
+              </div>
+
+          <div class="clear"></div>
+
+        </div>
+      </section>
+
+      <section class="index movie">
+
+        <h2><a href="#">Nos Cinemas</a></h2>
+
+        <div class="column">
+
+          <div class="info second">
+            <a href="#">
+              <img class="backdrop lazyload fade" data-sizes="auto"
+              src="../assets/6P3c80EOm7BodndGBUAJHHsHKrp.jpg"
+              data-src="../assets/6P3c80EOm7BodndGBUAJHHsHKrp.jpg"
+              data-srcset="../assets/6P3c80EOm7BodndGBUAJHHsHKrp.jpg 1x, ../assets/6P3c80EOm7BodndGBUAJHHsHKrp.jpg 2x" alt="Homem-Formiga e Vespa">
+            </a>
+            <span>
+              <a class="text" href="#">
+                <h3>Homem-Formiga e Vespa</h3>
+                <p>Evangeline Lilly, Paul Rudd</p>
+              </a>
+            </span>
+          </div>
+
+            <div class="info third">
+              <a href="#">
+                <img class="backdrop lazyload fade" data-sizes="auto"
+                src="../assets/mabuNsGJgRuCTuGqjFkWe1xdu19.jpg"
+                data-src="../assets/mabuNsGJgRuCTuGqjFkWe1xdu19.jpg"
+                data-srcset="h../assets/mabuNsGJgRuCTuGqjFkWe1xdu19.jpg 1x, ../assets/mabuNsGJgRuCTuGqjFkWe1xdu19.jpg 2x" alt="Os Incríveis 2">
+              </a>
+              <span>
+                <a class="text" href="#">
+                  <h3>Os Incríveis 2</h3>
+                  <p>Craig T. Nelson, Holly Hunter</p>
+                </a>
+              </span>
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="info first">
+                <a href="#">
+                  <img class="backdrop lazyload fade" data-sizes="auto"
+                  src="../assets/gBmrsugfWpiXRh13Vo3j0WW55qD.jpg"
+                  data-src="../assets/gBmrsugfWpiXRh13Vo3j0WW55qD.jpg"
+                  data-srcset="../assets/gBmrsugfWpiXRh13Vo3j0WW55qD.jpg 1x, ../assets/gBmrsugfWpiXRh13Vo3j0WW55qD.jpg 2x" alt="Mundo Jurássico: Reino Caído">
+                </a>
+                <span>
+
+                <a href="#">
+                  <img class="poster lazyload fade" data-sizes="auto"
+                  src="../assets/5PWRDsozYR1VeExrFLqZ8Qpw07m.jpg"
+                  data-src="../assets/5PWRDsozYR1VeExrFLqZ8Qpw07m.jpg"
+                  data-srcset="../assets/5PWRDsozYR1VeExrFLqZ8Qpw07m.jpg 1x, ../assets/5PWRDsozYR1VeExrFLqZ8Qpw07m.jpg 2x" alt="Mundo Jurássico: Reino Caído">
+                </a>
+
+                  <div class="content">
+                    <a class="text" href="#">
+                      <h3>Mundo Jurássico: Reino Caído</h3>
+                      <p>Bryce Dallas Howard, Chris Pratt, Isabella Sermon</p>
+                    </a>
+                  </div>
+                </span>
+              </div>
+
+        </div>
+      </section>
+
+      <div class="clear"></div>
+
+    </div><!-- >media  -->
+
+    <div class="index sub_media">
+
+      <section class="lists">
+        <h2 class="category"><span class="title">Listas em Destaque</span></h2>
+
+        <ul>
+            <li>
+              <a href="#">
+                <img class="poster lazyload fade" data-sizes="auto"
+                src="../assets/wXmhSF2bajJ9Qc8IwbYnTQ3QYnE.jpg"
+                data-src="../assets/wXmhSF2bajJ9Qc8IwbYnTQ3QYnE.jpg"
+                data-srcset="../assets/wXmhSF2bajJ9Qc8IwbYnTQ3QYnE.jpg 1x, ../assets/wXmhSF2bajJ9Qc8IwbYnTQ3QYnE.jpg 2x" alt="AFI&amp;#x27;s 100 years... 100 laughs">
+              </a>
+              <h3><a href="#">AFI's 100 years... 100 laughs</a></h3>
+              <p>Quanto Mais Quente Melhor, Doutor Estranhoamor, Tootsie, 97 more...</p>
+            </li>
+
+            <li>
+              <a href="#">
+                <img class="poster lazyload fade" data-sizes="auto"
+                src="../assets/coJVIUEOToAEGViuhclM7pXC75R.jpg"
+                data-src="../assets/coJVIUEOToAEGViuhclM7pXC75R.jpg"
+                data-srcset="../assets/coJVIUEOToAEGViuhclM7pXC75R.jpg 1x, ../assets/coJVIUEOToAEGViuhclM7pXC75R.jpg 2x" alt="The Marvel Universe">
+              </a>
+              <h3><a href="#">The Marvel Universe</a></h3>
+              <p>Vingadores: A Era de Ultron, Guardiões da Galáxia, X-Men: Dias de um Futuro Esquecido, 39 more...</p>
+            </li>
+
+            <li>
+              <a href="#">
+                <img class="poster lazyload fade" data-sizes="auto"
+                src="../assets/4H1jWsgEQOgTs4KeG5j5BorKMfX.jpg"
+                data-src="../assets/4H1jWsgEQOgTs4KeG5j5BorKMfX.jpg"
+                data-srcset="../assets/4H1jWsgEQOgTs4KeG5j5BorKMfX.jpg 1x, ../assets/4H1jWsgEQOgTs4KeG5j5BorKMfX.jpg 2x" alt="The DC Comics Universe">
+              </a>
+              <h3><a href="#">The DC Comics Universe</a></h3>
+              <p>Homem de Aço, Liga da Justiça, Batman v Super-Homem: O Despertar da Justiça, 22 more...</p>
+            </li>
+        </ul>
+      </section><!-- .lists -->
+
+      <section class="users">
+        <h2 class="category">
+
+        <span class="title">Top de Utilizadores</span>
+        <span class="sub"><a href="#">ver tudo</a></span>
+        </h2>
+        <ul>
+            <li>
+              <a href="#">Samara</a> (19735)
+            </li>
+
+            <li>
+              <a href="#">Banana</a> (7547)
+            </li>
+
+            <li>
+              <a href="#">Marr 🇳🇱</a> (4860)
+            </li>
+
+            <li>
+              <a href="#">lineker</a> (3690)
+            </li>
+
+            <li>
+              <a href="#">sergeg</a> (3604)
+            </li>
+        </ul>
+      </section>
+
+      <div class="clear"></div>
+
+    </div><!-- .index sub_media -->
+  </div><!-- div -->
+</main>

@@ -6,6 +6,8 @@ import { SharedModule } from "../shared/shared.module";
 
 import { MoviesRoutingModule } from "./movies-rounting.module";
 
+import { HttpClientModule } from "@angular/common/http";
+
 import { MovieListComponent } from "./movie-list/list.component";
 import { MovieDetailsComponent } from "./movie/details.component";
 
@@ -18,7 +20,7 @@ const exportedComponent: any[] = [
 ];
 
 @NgModule({
-  imports: [ SharedModule, MoviesRoutingModule ],
+  imports: [ SharedModule, MoviesRoutingModule, HttpClientModule ],
   declarations: [
     ...exportedComponent
   ],

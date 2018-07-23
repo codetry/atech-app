@@ -1,0 +1,590 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #081c24;
+  width: 100%;
+  z-index: 999;
+}
+header a {
+  color: #fff;
+  font-weight: 600;
+}
+header>div.content {
+  height: 111px;
+  margin: 0 auto;
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  will-change: height;
+}
+header.regular>div.content {
+  height: 111px;
+}
+header.smaller>div.content {
+  height: 64px;
+}
+header.smaller ul {
+  height: 64px;
+}
+header.no_animation>div.content {
+  animation: none;
+}
+div.sub_media {
+  width: 1000px;
+  margin: 0 auto;
+}
+header div.sub_media {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+header div.sub_media div.left {
+  max-width: 60%;
+}
+header div.sub_media div.right {
+  max-width: 40%;
+}
+header ul {
+  display: flex;
+  align-items: center;
+  font-size: 0.8em;
+  height: 72px;
+  box-sizing: border-box;
+}
+header ul.small {
+  display: inline-flex;
+  height: auto;
+  position: absolute;
+  font-size: 0.75em;
+}
+header ul.small.left.hide {
+  display: none;
+}
+header ul.small.left.discover {
+  top: 64px;
+  left: 122px;
+  font-size: 0.9em;
+}
+header ul.small.left.movie {
+  top: 64px;
+  left: 221px;
+  font-size: 0.9em;
+}
+header ul.small.left.tv {
+  top: 64px;
+  left: 303px;
+  font-size: 0.9em;
+}
+header ul.small.right {
+  top: -4px;
+right: 0;
+}
+header.smaller ul.small {
+  opacity: 0;
+}
+header ul.small a {
+  color: #868e91;
+}
+body.en header ul.primary {
+  text-transform: uppercase;
+}
+header div.left ul.primary li {
+  text-align: right;
+  padding: 10px 0;
+}
+header ul.primary li.user a {
+  display: block;
+  padding: 10px 0;
+}
+header ul.primary li.user a div.avatar {
+  display: block;
+  overflow: hidden;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%}
+header ul.left {
+  justify-content: flex-start;
+}
+header ul.right {
+  justify-content: flex-end;
+}
+header ul li span.glyphicons {
+  top: 2px;
+}
+header div.left ul li {
+  margin-right: 30px;
+  padding: 0;
+}
+header div.right li, header ul.right li {
+  margin-left: 30px;
+}
+header ul.small.left li {
+  margin-right: 20px;
+}
+header ul.sub_menu {
+  display: inline-flex;
+  justify-content: flex-start;
+  height: auto;
+  position: absolute;
+  top: 41px;
+  left: 0;
+  font-size: 0.9em;
+  transition: opacity 1s ease;
+}
+header ul.sub_menu.hide {
+  display: none;
+}
+header.smaller ul.sub_menu {
+  display: none !important;
+}
+header ul.sub_menu.discover {
+  left: 111px;
+}
+header ul.sub_menu.movie {
+  left: 211px;
+}
+header ul.sub_menu.tv {
+  left: 293px;
+}
+header ul.sub_menu.person {
+  left: 396px;
+}
+header ul.sub_menu li {
+  display: inline-block;
+}
+header ul.sub_menu li a {
+  color: #868e91;
+  text-transform: none;
+}
+header ul li.logo {
+  position: relative;
+  top: 3px;
+  width: 81px;
+  height: 72px;
+}
+header ul li.logo a {
+  display: block;
+}
+header ul li.logo img {
+  display: block;
+  will-change: height,  width;
+}
+header.smaller ul li.logo {
+  width: 45px;
+  height: 40px;
+}
+header.smaller ul li.logo img {
+  width: 45px;
+  height: 40px;
+}
+header ul .glyph:before {
+  font-family: "Glyphicons Regular";
+  position: relative;
+  top: 1px;
+}
+header ul li div.glyph_wrapper {
+  box-sizing: border-box;
+  width: 34px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+header ul li div.glyph_wrapper:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #051014;
+  border-radius: 6px;
+  border-bottom-width: 0px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  box-shadow: #0d2e3c 0px 1px 0px 0px inset;
+  background: linear-gradient(#0d2732 5%,  #081c24 90%);
+  opacity: 0;
+}
+header ul li div.glyph_wrapper:hover:after {
+  opacity: 1;
+  border-bottom-width: 0px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+header ul li div.glyph_wrapper a {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+header ul li div.glyph_wrapper a span.glyphicons {
+  left: 2px;
+  z-index: 5;
+}
+header ul li div.glyph_wrapper a span.glyphicons, x:-moz-any-link {
+  left: 1px;
+}
+header ul li div.glyph_wrapper div.rollover {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  z-index: 0;
+  padding: 20px;
+  text-align: left;
+  visibility: hidden;
+}
+html.k-ie header ul li div.glyph_wrapper div.rollover, html.k-edge header ul li div.glyph_wrapper div.rollover {
+  top: 29px;
+}
+header ul li div.glyph_wrapper:hover div.rollover {
+  animation: fadeIn 0.3s linear;
+  visibility: visible;
+}
+header ul li div.glyph_wrapper:hover div.rollover:after {
+  content: '';
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background: linear-gradient(#081c24 90%,  #081c24 100%);
+  border: 1px solid #051014;
+  border-radius: 6px;
+  border-top-left-radius: 0;
+  z-index: -1;
+  opacity: 0.95;
+}
+header ul li div.glyph_wrapper div.rollover p {
+  font-weight: 400;
+  width: 200px;
+  display: inline-block;
+}
+header ul li div.glyph_wrapper div.rollover:hover {
+  cursor: default;
+}
+header ul li div.glyph_wrapper div.rollover a {
+  display: inline-block;
+  width: auto;
+  white-space: nowrap;
+  font-size: 0.9em;
+  background-color: #081c24;
+  color: #fff;
+  transition: none;
+}
+header ul li div.glyph_wrapper div.rollover a:hover {
+  border-color: #fff;
+  background-color: #fff;
+  color: #081c24;
+}
+header ul li div.glyph_wrapper div.rollover a:last-of-type {
+  margin-top: 20px;
+}
+header ul li.glyph {
+  color: #fff;
+  padding: 8px 0 8px 0;
+  width: 16px;
+}
+header ul li.glyph:hover {
+  cursor: pointer;
+}
+header ul li.translate {
+  padding: 12px 0;
+}
+header ul li.translate div {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  padding: 0 5px;
+  transition: linear .1s;
+  box-sizing: border-box;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+header ul li.translate div:hover {
+  cursor: pointer;
+  color: #081c24;
+  background-color: #fff;
+}
+header ul li.translate.orange div {
+  color: #ffa250;
+  border-color: #ffa250;
+}
+header ul li.translate.orange div:hover {
+  color: #081c24;
+  background-color: #ffa250;
+}
+header ul li.user {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+header ul li.user img {
+  height: 32px;
+  width: 32px;
+  display: block;
+}
+header ul li.user span {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 0.9em;
+  font-weight: 600;
+  box-sizing: border-box;
+}
+header ul li.user p {
+  text-align: right;
+}
+header ul li p {
+  margin: 0 6px 0 0;
+  text-transform: none;
+}
+header div.k-animation-container {
+  box-sizing: border-box;
+  width: 100% !important;
+  height: auto !important;
+  overflow-x: hidden !important;
+  overflow-y: scroll !important;
+  top: 159px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  font-size: 18px !important;
+  border-bottom: 1px solid #dedede;
+  background-color: #fff;
+  overflow-y: hidden !important;
+}
+header.smaller div.k-animation-container {
+  top: 106px !important;
+}
+header div.k-animation-container div.k-list-container {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 auto !important;
+  position: static !important;
+  overflow: hidden;
+  font-size: 18px !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+header div.k-animation-container div.k-popup {
+  box-shadow: none;
+  border: none;
+  background-color: transparent !important;
+}
+header .k-popup .k-list .k-item {
+  padding: 0;
+  border-radius: 0;
+  border: none;
+}
+header div.k-animation-container div.k-list-container>div {
+  height: auto !important;
+}
+header div.k-animation-container div.k-popup ul.k-list {
+  display: inline-block;
+  width: 100%}
+header div.k-animation-container div.k-popup ul.k-list li {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.k-list>.k-state-focused, .k-list>.k-state-hover {
+  color: #000 !important;
+  background-color: #f4f4f4 !important;
+}
+section.search span.k-autocomplete {
+  width: 100% !important;
+  border: none !important;
+  background-color: transparent !important;
+  box-sizing: border-box !important;
+  transition: all 0s !important;
+}
+header .k-popup .k-list .k-state-hover {
+  padding: 0 !important;
+  transition: all 0s !important;
+  color: #000;
+}
+section.search span.k-autocomplete.k-state-hover, section.search span.k-autocomplete.k-state-focused, section.search span.k-autocomplete.k-state-border-down, section.search span.k-autocomplete.k-state-border-up {
+  box-shadow: none;
+}
+.k-nodata {
+  height: auto !important;
+  min-height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+section.search {
+  width: 100%;
+  background-color: #fff;
+  height: 46px;
+  border-bottom: 1px solid #dedede;
+}
+header.smaller section.search {
+  overflow: hidden;
+  height: 40px;
+}
+section.search form {
+  display: block;
+}
+section.search form span.glyphicons {
+  pointer-events: none;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  font-size: 1.5em;
+  color: #acacac;
+  width: 40px;
+  display: inline-block;
+}
+header.smaller section.search form span.glyphicons {
+  font-size: 1em;
+}
+section.search form input[type=submit] {
+  display: none;
+}
+section.search span.k-autocomplete:before {
+  font-family: "Glyphicons Regular";
+  content: "\e028";
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1em;
+  color: #acacac;
+  height: 46px;
+}
+section.search span.k-autocomplete.k-state-hover:before {
+  color: #081c24;
+}
+section.search form input[type=text] {
+  width: 100%;
+  height: 46px;
+  border: none !important;
+  outline: none;
+  font-family: Arial,  sans-serif;
+  font-style: italic;
+  font-weight: light;
+  font-size: 100%;
+  line-height: 1.2em;
+  color: #acacac;
+  box-sizing: border-box;
+  text-indent: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+section.search form input[type=text]::-webkit-input-placeholder {
+  color: #acacac;
+}
+section.search form input[type=text]:-ms-input-placeholder {
+  color: #acacac;
+}
+section.search form input[type=text]::-moz-placeholder {
+  color: #acacac;
+  opacity: 1;
+}
+section.search form input[type=text]:-moz-placeholder {
+  color: #acacac;
+  opacity: 1;
+}
+section.search form input[type=text]+.k-i-close {
+  padding: 0 0 6px 6px;
+  right: 0;
+}
+section.search form .k-autocomplete .k-i-loading {
+  background-size: 16px;
+  top: 15px;
+  right: 24px;
+}
+section.search span.k-autocomplete .k-input {
+  border: none;
+  border-radius: 0;
+  padding: 0 30px;
+  height: 46px;
+box-sizing: border-box;
+}
+header.smaller section.search span.k-autocomplete:before {
+  height: 40px;
+}
+header.smaller section.search form input[type=text] {
+  height: 40px;
+  font-size: 1em;
+  padding-left: 24px;
+}
+ul#search_v4_listbox li {
+  min-height: auto;
+  line-height: normal;
+  font-size: 1em;
+}
+div.slim_search_results_header {
+  display: flex;
+  justify-content: center;
+}
+div.slim_search_results_header div.wrapper {
+  width: 1000px;
+  align-items: flex-start;
+}
+div.slim_search_results_header h2 {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 20px 0;
+  padding: 0;
+  text-align: left;
+}
+div.slim_search_results_header.no_data h2 {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #000;
+  padding-bottom: 20px;
+}
+div.slim_search_results {
+  display: flex;
+  justify-content: center;
+  padding: 3px 0 4px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+div.slim_search_results div.wrapper {
+  width: 1000px;
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+div.slim_search_results div.wrapper:hover {
+  cursor: pointer;
+}
+div.slim_search_results div.glyphicons {
+  margin-right: 10px;
+}
+div.slim_search_results p {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+div.slim_search_results p span {
+  color: rgba(0, 0, 0, 0.4);
+}
+ul#search_v4_listbox li:last-of-type div.slim_search_results {
+  border-bottom: none;
+}
+footer.movie.header_medium, footer.tv.header_medium, footer.person.header_medium {
+  margin-top: 40px;
+}

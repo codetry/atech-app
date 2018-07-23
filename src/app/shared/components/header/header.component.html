@@ -1,3 +1,93 @@
-<p>
-  Header works!
-</p>
+<header class="normal">
+  <div class="content">
+    <div class="sub_media">
+
+        <ul class="small right">
+          <li><a href="#">Aplicações</a></li>
+          <li><a href="#">Fóruns</a></li>
+          <li><a href="#">Líderes</a></li>
+          <li><a href="#">Contribuir</a></li>
+          <li><a href="#">API</a></li>
+          <li><a href="#">Apoio</a></li>
+        </ul>
+
+      <div class="left">
+        <ul class="primary">
+          <li class="logo">
+            <a href="index.html">
+              <img src="../../../../assets/primary-green-d70eebe18a5eb5b166d5c1ef0796715b8d1a2cbc698f96d311d62f894ae87085.svg" width="81" height="72">
+            </a>
+          </li>
+          <li>
+            <a href="#">Explorar</a>
+            <ul class="sub_menu discover hide">
+              <li><a href="#">Filmes</a></li>
+              <li><a href="#">Séries de TV</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Filmes</a>
+            <ul class="sub_menu movie hide">
+              <li><a href="#">Populares</a></li>
+              <li><a href="#">Melhor Pontuação</a></li>
+              <li><a href="#">Brevemente</a></li>
+              <li><a href="#">Em Exibição</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Séries de TV</a>
+            <ul class="sub_menu tv hide">
+              <li><a href="#">Populares</a></li>
+              <li><a href="#">Melhor Pontuação</a></li>
+              <li><a href="#">Na TV</a></li>
+              <li><a href="#">Emitidos Hoje</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Pessoas</a>
+            <ul class="sub_menu person hide">
+              <li><a href="#">Pessoas Famosas</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- .left -->
+
+      <div class="right">
+        <ul class="primary">
+          <li>
+            <div class="glyph_wrapper">
+              <a class="glyph new_icon no_click" href="#">
+                <span class="glyphicons glyphicons-plus"></span>
+                <div class="rollover">
+                  <p>Não consegue encontrar um certo Filme ou Série de TV? Inicie Sessão e adicione-o.</p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="translate">
+            <div>pt</div>
+          </li>
+
+          <li><a href="#">Iniciar Sessão</a></li>
+          <li><a href="#">Registar</a></li>
+
+        </ul>
+      </div><!-- .right -->
+
+    </div><!-- .sub_media -->
+  </div><!-- .content -->
+
+  <div class="search_bar">
+    <section class="search">
+      <div class="sub_media">
+        <form id="search_form" action="/search" method="get" accept-charset="utf-8">
+
+          <input type="hidden" name="language" value="pt-PT">
+
+          <input dir="auto" id="search_v4" name="query" type="text" tabindex="2" autocorrect="off" autofill="off" autocomplete="off" spellcheck="false" placeholder="Procure por um filme, série televisiva, pessoa" value="">
+          <input type="submit">
+        </form>
+      </div>
+    </section>
+  </div><!-- .search_bar -->
+</header>

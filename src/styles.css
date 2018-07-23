@@ -1,2 +1,950 @@
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    height: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    background-color: #f4f4f4;
+    color: #000;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 1em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body {
+  margin: 0;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden], template {
+  display: none;
+}
+a {
+  background: transparent;
+}
+a:active, a:hover {
+  outline: 0;
+}
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+b, strong {
+    font-weight: bold;
+}
+dfn {
+    font-style: italic;
+}
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+mark {
+    background: #ff0;
+    color: #000;
+}
+small {
+    font-size: 80%}
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}
+img {
+    border: 0;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+figure {
+    margin: 1em 40px;
+}
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+pre {
+    overflow: auto;
+}
+code, kbd, pre, samp {
+    font-family: monospace,  monospace;
+    font-size: 1em;
+}
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+button {
+    overflow: visible;
+}
+button, select {
+    text-transform: none;
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+button[disabled], html input[disabled] {
+    cursor: default;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+input {
+    line-height: normal;
+}
+input[type="checkbox"], input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+legend {
+    border: 0;
+    padding: 0;
+}
+textarea {
+    overflow: auto;
+}
+optgroup {
+    font-weight: bold;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+td, th {
+    padding: 0;
+}
+ul {
+    list-style-type: none;
+    line-height: 1.4em;
+}
+a {
+    color: #000;
+    text-decoration: none;
+    font-weight: normal;
+}
+person {
+    color: #f62d5d;
+}
+.tv_show, .tv {
+    color: #2dd4f7;
+}
+.green, .movie {
+    color: #00d573;
+}
+.black {
+    color: #000;
+}
+.align_right {
+    text-align: right;
+}
+.align_top {
+    vertical-align: top;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.center {
+    text-align: center;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+.visible_hidden {
+    visibility: hidden;
+}
+.no_pad {
+    padding: 0;
+}
+.grey {
+    color: #666;
+}
+.grey2 {
+    color: #5a5a5a;
+}
+.grey3 {
+    color: #959595;
+}
+.pink {
+    color: #eb1da5;
+}
+.yellow {
+    color: #efd147;
+}
+.last {
+    margin-bottom: 30px;
+}
+.selected {
+    border-bottom: 1px solid;
+}
+.bold {
+    font-weight: bold !important;
+}
+.clear {
+  clear: both;
+}
+.k-autocomplete, .k-block, .k-calendar th, .k-content, .k-dropdown-wrap, .k-dropzone-active, .k-editable-area, .k-filter-row>th, .k-footer-template td, .k-grid td, .k-grid td.k-state-selected, .k-grid-content-locked, .k-grid-footer, .k-grid-footer-locked, .k-grid-footer-wrap, .k-grid-header, .k-grid-header-locked, .k-grid-header-wrap, .k-group, .k-group-footer td, .k-grouping-header, .k-grouping-header .k-group-indicator, .k-header, .k-input, .k-pager-refresh, .k-pager-wrap, .k-pager-wrap .k-link, .k-panel>.k-item>.k-link, .k-panelbar .k-content, .k-panelbar .k-panel, .k-panelbar>.k-item>.k-link, .k-popup.k-align .k-list .k-item:last-child, .k-separator, .k-slider-track, .k-splitbar, .k-state-default, .k-state-default .k-select, .k-state-disabled, .k-textbox, .k-textbox>input, .k-tiles, .k-tooltip, .k-treemap-tile, .k-upload-files, .k-widget {
+    border-color: #e6e6e6;
+}
+.k-calendar th, .k-dropzone-hovered, .k-footer-template td, .k-grid-footer, .k-group, .k-group-footer td, .k-grouping-header, .k-pager-wrap, .k-popup, .k-widget .k-status {
+    background-color: #3f51b5;
+}
+.k-button:hover .k-tool-icon, .k-field-actions .k-icon, .k-gantt-toolbar .k-icon, .k-grid-toolbar .k-button:hover>.k-i-file-excel, .k-grid-toolbar .k-button:hover>.k-i-file-pdf, .k-grid-toolbar .k-i-file-excel, .k-grid-toolbar .k-i-file-pdf, .k-grid-toolbar .k-icon, .k-grouping-header .k-button-icon:hover>.k-icon.k-i-delete, .k-grouping-header .k-i-arrow-60-down, .k-grouping-header .k-i-arrow-60-up, .k-grouping-header .k-i-delete, .k-grouping-header .k-link:hover>.k-icon.k-i-arrow-60-down, .k-grouping-header .k-link:hover>.k-icon.k-i-arrow-60-up, .k-notification .k-icon, .k-pivot-configurator-settings .k-icon:hover, .k-scheduler-content .k-icon, .k-scheduler-footer .k-icon, .k-scheduler-toolbar .k-icon, .k-splitbar.k-splitbar-horizontal-hover .k-icon, .k-splitbar.k-splitbar-vertical-hover .k-icon, .k-state-focused .k-tool-icon, .k-state-hover .k-tool-icon, .k-state-selected .k-tool-icon, .k-textbox:hover>.k-icon, .k-tool-icon:hover, .k-window-titlebar .k-icon, div.k-splitbar.k-state-focused .k-icon {
+    opacity: 1;
+}
+div {
+  display: block;
+}
+div.page_wrap {
+    display: flex;
+    flex: 1 1 auto;
+    min-height: 100%;
+    height: auto;
+}
+main {
+    box-sizing: border-box;
+    padding-top: 158px;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+}
+main.smaller {
+    padding-top: 104px;
+}
+section.main_content nav {
+    width: 260px;
+    float: left;
+}
+section.main_content nav h2 {
+    clear: both;
+}
+section.main_content h2 span.glyphicons.breadcrumb {
+    font-size: 0.7em;
+    color: #999;
+    line-height: 1.8em;
+}
+section.main_content section {
+    width: 740px;
+    float: left;
+    box-sizing: border-box;
+}
+section.main_content section.full {
+    width: 100%;
+    float: none;
+}
+section.main_content h2, section.main_content section h2 {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+section.main_content h2 span.glyphicons {
+    font-size: 0.9em;
+    padding-right: 5px;
+    position: static;
+    top: 0;
+}
+section.main_content h2 img.svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+section.main_content h2 a.glyphicons {
+    display: inline-block;
+    position: static;
+    top: 0;
+}
+section.main_content h2 a span.glyphicons {
+    opacity: 0.25;
+    top: 0;
+}
+section.main_content h2>a {
+    margin-left: 8px;
+}
+section.main_content nav>ul, ul.nav {
+    width: 210px;
+    border-top: 2px solid #000;
+}
+section.main_content nav>ul>li, ul.nav>li {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+section.main_content nav>ul>li>a, ul.nav>li>a {
+    display: block;
+    width: 210px;
+    border-bottom: 2px solid #000;
+    padding: 12px 0 12px 0;
+    box-sizing: border-box;
+    font-weight: 600;
+}
+ul.nav {
+    width: 100%;
+    border-top: 2px solid #000;
+}
+div.column ul.nav li {
+    margin-bottom: 0;
+    font-size: 1em;
+}
+section.main_content nav>ul>li, ul.nav>li {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+section.main_content nav>ul>li>a, ul.nav>li>a {
+    display: block;
+    width: 210px;
+    border-bottom: 2px solid #000;
+    padding: 12px 0 12px 0;
+    box-sizing: border-box;
+    font-weight: 600;
+}
+ul.nav>li>a {
+    width: 100%;
+    border-bottom: 2px solid #000;
+    font-weight: 600;
+    color: #000;
+}
+ul.nav>li>a span {
+    opacity: 0.6;
+}
+section.main_content nav ul.sub_nav, ul.nav ul.sub_nav {
+    margin: 8px 0 0 16px;
+}
+section.main_content nav ul.sub_nav li a, ul.nav ul.sub_nav li a {
+    display: block;
+    height: 18px;
+    padding: 4px 0 4px 0;
+    line-height: 19px;
+    color: #000;
+}
+ul.nav ul.sub_nav li span {
+    color: #666;
+}
+section.main_content nav ul.sub_nav li a .glyphicons, ul.nav ul.sub_nav li a .glyphicons {
+    top: 2px;
+    padding-right: 8px;
+}
+section.main_content nav ul.sub_nav li a .glyphicons.glyphicons-edit, ul.nav ul.sub_nav li a .glyphicons.glyphicons-edit {
+    top: 1px;
+}
+section.main_content nav>ul li a:hover, section.main_content nav>ul li a.active {
+    border-bottom: 2px solid #00d573;
+}
+ul.nav li a:hover, ul.nav li a.active {
+    border-bottom: 2px solid #000;
+}
+section.main_content nav ul.sub_nav li a:hover, ul.nav li ul.sub_nav li a:hover {
+    border-bottom: none;
+    color: #666;
+}
+section.main_content nav ul.sub_sub_nav, ul.nav ul.sub_sub_nav {
+    margin: 0 0 0 26px;
+}
+section.main_content nav ul.sub_sub_nav li a, ul.nav ul.sub_sub_nav li a {
+    font-size: 0.9em;
+    line-height: 14px;
+}
+section.main_content nav ul.sub_sub_nav li a .glyphicons, ul.nav ul.sub_sub_nav li a .glyphicons {
+    padding-right: 6px;
+}
+section.main_content section.content ul {
+    list-style-type: disc;
+    list-style-position: outside;
+}
+section.main_content section.content ul.k-widget {
+    list-style-type: none;
+    margin: initial;
+}
+section.main_content section.content ul.tickets {
+    margin: initial;
+}
+section.main_content section.content ul li {
+    margin-left: 20px;
+}
+section.main_content section.content ul.k-widget li {
+    margin-left: 0;
+}
+section.main_content section.content p ~ ul {
+    margin-left: 20px;
+}
+section.main_content section.content div.app h4 span {
+    color: initial;
+    font-weight: normal;
+}
+section.main_content section.content div.app {
+    display: block;
+    width: 100%;
+    clear: left;
+}
+section.main_content section.content div.app>a img {
+    float: left;
+    width: 144px;
+}
+section.main_content section.content div.details {
+    float: left;
+    padding: 4px 0 0 24px;
+    margin-bottom: 30px;
+    width: 570px;
+}
+section.main_content section.content div.details.full {
+    float: left;
+    padding: 4px 0 0 0;
+    width: 714px;
+}
+section.main_content section.content div.details.full h4 a {
+    font-weight: bold;
+}
+section.main_content section.content div.details p:last-of-type {
+    margin-bottom: 4px;
+}
+section.main_content section.content div.metrics_info {
+    width: 100%;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    margin: 30px 0 40px 0;
+}
+section.main_content section.content div.metrics_info h2 {
+    font-size: 1.1em;
+}
+section.main_content section.content div.metrics_info h3 {
+    font-size: 0.9em;
+    color: #999;
+}
+section.main_content section.content div.metrics_info p {
+    margin-bottom: 0;
+    color: #333;
+}
+section.main_content section.content div.metrics_info div.breakdown {
+    padding: 16px 20px;
+    float: left;
+    margin-right: 20px;
+}
+section.main_content section.content ul.tabs {
+    display: block;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    margin: 0;
+}
+section.main_content section.content ul.tabs li {
+    height: 40px;
+    display: inline-block;
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    border-left: 1px solid #ccc;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+section.main_content section.content ul.tabs li:first-child {
+    border-left: none;
+}
+section.main_content section.content ul.tabs li.last_child {
+    width: 100%;
+    text-align: right;
+    padding: 0 10px;
+    border-bottom: 1px solid #ccc;
+}
+section.main_content section.content ul.tabs li a {
+    border-top: 2px solid transparent;
+    border-bottom: 1px solid #ccc;
+}
+section.main_content section.content ul.tabs li a.active {
+    border-top: 2px solid #068039;
+    border-bottom: none;
+}
+section.main_content section.content ul.tabs li a {
+    color: #000;
+    display: block;
+    height: 100%;
+    padding: 0 40px;
+    line-height: 35px;
+}
+section.main_content section.content ul.tabs li a:hover {
+    text-decoration: none;
+}
+section.main_content div.flex {
+    box-sizing: border-box;
+    display: flex;
+}
+section.main_content div.flex section.column {
+    float: none;
+}
+section.main_content div.flex section.column.main {
+    width: 600px;
+    margin-right: 40px;
+    box-sizing: border-box;
+}
+section.main_content div.flex section.column.sidebar {
+    width: 400px;
+    box-sizing: border-box;
+}
+section.main_content div.flex section.column div.card.colored {
+    width: 100%;
+    border-radius: 20px;
+}
+section.main_content div.flex section.column div.card.colored div.background {
+    background-image: radial-gradient(at 30% top,  #074034 0%,  #081c24 70%);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+section.main_content div.flex section.column div.card.colored div.top:before {
+    content: "";
+    /* background-image: url("../../emojis/static_cache/v2/1f530-v=2.2.7.svg"); */
+    background-repeat: no-repeat;
+    background-position: right 50%;
+    position: absolute;
+    background-size: 35%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    filter: grayscale(100%) opacity(20%);
+    overflow: hidden;
+}
+section.main_content div.flex section.column div.card.colored div.top {
+    z-index: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 60px 20px 0 20px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    color: #fff;
+    overflow: hidden;
+}
+section.main_content div.flex section.column div.card.colored div.top h2 {
+    font-weight: 700;
+    font-size: 1.8em;
+}
+section.main_content div.flex section.column div.card.colored div.bottom {
+    padding: 20px;
+}
+section.main_content div.flex section.column div.card.colored div.bottom ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    margin-left: 20px;
+}
+section.main_content div.flex section.column div.card.colored div.bottom ul:last-child {
+    margin-bottom: 0;
+}
+section.main_content.search_results nav {
+    box-sizing: border-box;
+}
+section.main_content.search_results nav.stuck {
+    position: fixed;
+    top: 0;
+}
+section.main_content.search_results nav.stuck+section.content {
+    margin-left: 260px;
+    padding-bottom: 30px;
+}
+section.main_content.search_results nav h2 {
+    font-size: 1.0em;
+    width: 210px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+section.main_content.search_results nav ul:last-child {
+    border-top: 0;
+    font-size: 0.9em;
+    color: #666;
+}
+section.main_content.search_results nav>ul.trending>li>a {
+    border-bottom: none;
+    padding: 0;
+    color: #666;
+    line-height: 1.3em;
+}
+section.main_content.search_results div.trending {
+    width: 210px;
+    overflow: hidden;
+}
+section.main_content.search_results div.trending ul.trending li {
+    padding-bottom: 6px;
+    padding-left: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+section.main_content.search_results h2 {
+    margin-bottom: 0;
+}
+section.main_content.search_results h2, section.main_content.search_results a {
+    color: #000;
+}
+section.main_content.search_results ul li a span {
+    color: #666;
+}
+section.main_content.search_results p {
+    color: #000;
+}
+section.main_content.search_results ul+p {
+    margin-top: 20px;
+    padding-right: 46px;
+    padding-left: 25px;
+    box-sizing: border-box;
+    color: #666;
+    font-size: 0.85em;
+    line-height: 1.2em;
+}
+section.main_content.search_results ul+p span {
+    position: relative;
+    top: 2px;
+    left: 0;
+    margin-left: -25px;
+    padding-right: 5px;
+    display: inline;
+}
+section.main_content.search_results div.item {
+    display: block;
+    float: none;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+section.main_content.search_results div.results.flex div.item:nth-child(n+2) {
+    margin-top: 30px;
+}
+section.main_content.search_results div.item.profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 16px !important;
+}
+section.main_content.search_results div.item.card:nth-child(even) {
+    margin-left: 0;
+}
+section.main_content.search_results div.item.card {
+    width: 740px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #e3e3e3;
+}
+section.main_content.search_results div.item.backdrop.card.collection {
+    display: block;
+    width: 355px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+section.main_content.search_results div.results.flex.results_backdrop_card div.item:nth-child(-n+2) {
+    margin-top: 16px;
+}
+section.main_content.search_results div.item.backdrop.card.collection div.image_content a {
+    width: 355px;
+    height: 200px;
+}
+div.item.backdrop.card.collection div.image_content img {
+    left: 0;
+}
+section.main_content.search_results div.item.backdrop.collection div.image_content, section.main_content.search_results div.item.backdrop.collection div.image_content img {
+    width: 355px;
+    height: 200px;
+}
+section.main_content.search_results div.item.poster.card div.info {
+    width: 555px;
+}
+section.main_content.search_results div.poster.card figure {
+    width: 250px;
+    height: auto;
+}
+section.main_content.search_results div.item.profile p.name {
+    font-size: 1.4em;
+}
+section.main_content.search_results div.item.backdrop.collection p a.title {
+    max-width: 355px;
+}
+section.main_content.search_results div.company div.results, section.main_content.search_results div.keyword div.results, section.main_content.search_results div.network div.results {
+    margin-top: 20px;
+}
+section.main_content.search_results div.company div.results ul, section.main_content.search_results div.network div.results ul {
+    list-style-type: none;
+}
+section.main_content.search_results div.company div.results ul li:first-child, section.main_content.search_results div.network div.results ul li:first-child {
+    border-top: 1px solid #ccc;
+}
+section.main_content.search_results div.company div.results ul li, section.main_content.search_results div.network div.results ul li {
+    margin-left: 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+section.main_content.search_results div.company div.results ul li a:hover, section.main_content.search_results div.network div.results ul li a:hover {
+    text-decoration: none;
+    color: #666;
+}
+section.main_content.search_results div.company div.results ul li div, section.main_content.search_results div.network div.results ul li div {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    font-size: 20px;
+}
+section.main_content.search_results div.company div.results ul li span, section.main_content.search_results div.network div.results ul li span {
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+    font-size: 14px;
+    line-height: 1em;
+    font-weight: 400;
+    margin-left: 6px;
+    padding: 2px 6px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border-radius: 4px;
+}
+section.main_content.search_results div.company div.results ul li img, section.main_content.search_results div.network div.results ul li img {
+    display: block;
+}
+div.media {
+    width: 1000px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+div.sub_media {
+    width: 1000px;
+    margin: 0 auto;
+}
+div.sub_media h2 {
+    font-size: 1.2em;
+    margin-left: 38px;
+}
+div.media section.index {
+    float: left;
+    width: 500px;
+    height: auto;
+    overflow: hidden;
+    display: inline-block;
+}
+div.media section.index div.column {
+    height: 422px;
+}
+div.media section.index div.info {
+    float: left;
+}
+div.media section.index div.info a.text {
+    color: #fff;
+    text-shadow: 1px 1px 0 #000;
+    display: block;
+}
+div.media section.index div.info span {
+    position: relative;
+    display: inline-block;
+}
+div.media section.index div.first img.backdrop {
+    width: 100%;
+    height: 100%}
+div.media section div.first {
+    width: 500px;
+    height: 281px;
+}
+div.media section.movie div.first {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+div.media section div.second, div.media section div.third {
+    width: 250px;
+    height: 141px;
+}
+div.media section div.second img, div.media section div.third img {
+    width: 250px;
+    height: 141px;
+}
+div.media section div.first span {
+    top: -94px;
+    left: 10px;
+    width: 480px;
+}
+div.media section div.first span div.content {
+    margin-top: 30px;
+    margin-left: 66px;
+}
+div.media section div.second span, div.media section div.third span {
+    top: -54px;
+    left: 10px;
+    display: block;
+    width: 230px;
+}
+div.media section div.first img {
+    width: 58px;
+    height: 87px;
+    float: left;
+    padding: 0;
+}
+div.media section div.info h3, div.media section div.info p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+div.media section.index div.info p {
+    font-size: 0.9em;
+    margin-top: 4px;
+}
+div.media section div.first h3, div.media section div.first p {
+    max-width: 400px;
+}
+div.media section.index div h3, div.media section.index div p {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+div.media section div.second h3, div.media section div.third h3, div.media section div.second p, div.media section div.third p {
+    max-width: 224px;
+}
+div.index.sub_media {
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+div.index.sub_media section {
+    float: left;
+}
+section.lists {
+    width: 720px;
+    margin-right: 30px;
+}
+section.lists ul {
+  padding-left: 0;
+}
+section.lists ul li {
+    float: left;
+    width: 236px;
+    padding: 0 4px 0 0;
+}
+section.lists ul li img, section.lists ul li div.no_image_holder {
+    float: left;
+    margin: 0 10px 0 0;
+}
+section.lists ul li img {
+    width: 92px;
+    height: 138px;
+}
+section.lists ul li h3, section.lists ul li p {
+    max-width: 126px;
+    white-space: wrap;
+    overflow: hidden;
+}
+section.lists ul li h3 {
+    font-size: 0.95em;
+    margin: 0 0 10px 0;
+    text-overflow: ellipsis;
+}
+section.lists ul li p {
+    font-size: 0.9em;
+    font-weight: 300;
+    text-overflow: clip;
+}
+section.lists ul li h3 a, section.users ul li a {
+    color: #00d573;
+    font-weight: 600;
+}
+div.media section.index div.info a.text {
+    color: #fff;
+    text-shadow: 1px 1px 0 #000;
+    display: block;
+}
+div.media section div.first span {
+    top: -94px;
+    left: 10px;
+    width: 480px;
+}
+div.media section.index div.info span {
+    position: relative;
+    display: inline-block;
+}
+h3 {
+    font-size: 1.2em;
+    line-height: 1.2em;
+    font-weight: 500;
+}
+h3 {
+    margin: 0 0 4px 0;
+}
+div.media section.index div h3, div.media section.index div p {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+div.media section div.info h3, div.media section div.info p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+div.media section div.first h3, div.media section div.first p {
+    max-width: 400px;
+}
+section.users {
+    width: 250px;
+}
+section.users ul li {
+    margin-bottom: 13px;
+}
+h2.category span.sub {
+  font-size: 0.6em;
+    float: right;
+    line-height: 2.6em;
+}
+h2.category span.sub a {
+    color: #999;
+}
+
 /* You can add global styles to this file, and also import other style files */
 @import './app/app.component.scss';
