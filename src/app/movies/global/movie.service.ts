@@ -34,8 +34,13 @@ export class MovieService {
     }
     url += `?api_key=${this._util.apiKey}`;
     url += `&page=${page}`;
+    // function (response) {
+    //   respone = this._http.get(url);
+    //   return response;
+    // }
     return this._http.get(url).map(response => {
-      console.log("res" ,response)
+      return response;
+      console.log("res" ,response);
     }).catch(err => {
       return of(null);
     });

@@ -72,13 +72,16 @@
       <section class="index tv">
         <h2><a href="#">Na TV</a></h2>
 
-        <!-- <div class="column"> -->
-        <div class="column" *ngFor="let movie of response">
-          {{movie[0].results.title}}
+        <div class="column">
+        <!-- <div class="column" *ngFor="let movie of response"> -->
+
+          <!-- {{movie.title}}
+          {{response}}
+          {{results}} -->
 
           <div class="info first">
             <!-- <a [routerLink]="['/movie', movie.id]"> -->
-            <a href="#">
+            <a href="./movie/details.component.html">
               <img class="backdrop lazyload fade" data-sizes="auto"
               src="../assets/qYTIuJJ7fIehicAt3bl0vW70Sq6.jpg"
               data-src="../assets/qYTIuJJ7fIehicAt3bl0vW70Sq6.jpg"
@@ -142,6 +145,7 @@
           <div class="clear"></div>
 
         </div>
+
       </section>
 
       <section class="index movie">

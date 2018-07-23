@@ -30,9 +30,7 @@ export class MovieListComponent implements OnInit, OnDestroy {
 
   getMovies(page: number = 1): void {
     this.sub1 = this._movie.movies(page, "popular").subscribe((movies: Movie[]) => {
-      // console.log("movies", movies);
       if (movies) {
-      console.log("movies", movies);
         this.movies.push(...movies);
       }
     });
