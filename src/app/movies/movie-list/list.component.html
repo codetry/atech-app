@@ -73,9 +73,9 @@
         <h2><a href="#">Na TV</a></h2>
 
         <!-- <div class="column"> -->
-        <div class="column" *ngFor="let movie of movies">
+        <div class="column">
 
-          <div class="info first">
+          <div class="info first" *ngFor="let movie of movies | slice:0:1;">
             <a [routerLink]="['/movie', movie.id]">
             <!-- <a href="#"> -->
               <img class="backdrop lazyload fade" data-sizes="auto"
@@ -94,7 +94,7 @@
 
               <div class="content">
                 <a class="text" href="#">
-                  <h3>Os 100</h3>
+                  <h3>{{movie.title}}</h3>
                 </a>
                 <a class="text" alt="Season 5, Episode 11" title="Season 5, Episode 11" href="#">
                   <p>New episode airs in 3 days</p>
@@ -103,7 +103,7 @@
             </span>
           </div>
 
-          <div class="info second">
+          <div class="info second" *ngFor="let movie of movies | slice:0:1;">
             <a href="#">
               <img class="backdrop lazyload fade" data-sizes="auto"
               src="../assets/7gRvLvHH78YAdchOghNpH2EysJ2.jpg"
@@ -113,7 +113,7 @@
             </a>
             <span>
               <a class="text" href="#">
-                <h3>Defesa à Medida</h3>
+                <h3>{{movie.title}}</h3>
               </a>
               <a class="text" alt="Season 8, Episode 2" title="Season 8, Episode 2" href="#">
                 <p>New episode airs in 4 days</p>
@@ -121,22 +121,22 @@
             </span>
           </div>
 
-          <div class="info third">
-                <a href="#">
-                  <img class="backdrop lazyload fade" data-sizes="auto"
-                  src="../assets/7crHhmTybBvGQ3Y96j4kdQ89ldY.jpg"
-                  data-src="../assets/7crHhmTybBvGQ3Y96j4kdQ89ldY.jpg"
-                  data-srcset="../assets/7crHhmTybBvGQ3Y96j4kdQ89ldY.jpg 1x, ../assets/7crHhmTybBvGQ3Y96j4kdQ89ldY.jpg 2x" alt="The Originals">
-                </a>
-                <span>
-                  <a class="text" href="#">
-                    <h3>The Originals</h3>
-                  </a>
-                  <a class="text" alt="Season 5, Episode 12" title="Season 5, Episode 12" href="#">
-                    <p>New episode airs in 4 days</p>
-                  </a>
-                </span>
-              </div>
+          <div class="info third" *ngFor="let movie of movies | slice:0:1;">
+            <a href="#">
+              <img class="backdrop lazyload fade" data-sizes="auto"
+              src="../assets/7crHhmTybBvGQ3Y96j4kdQ89ldY.jpg"
+              data-src="../assets/7crHhmTybBvGQ3Y96j4kdQ89ldY.jpg"
+              data-srcset="../assets/7crHhmTybBvGQ3Y96j4kdQ89ldY.jpg 1x, ../assets/7crHhmTybBvGQ3Y96j4kdQ89ldY.jpg 2x" alt="The Originals">
+            </a>
+            <span>
+              <a class="text" href="#">
+                <h3>{{movie.title}}</h3>
+              </a>
+              <a class="text" alt="Season 5, Episode 12" title="Season 5, Episode 12" href="#">
+                <p>New episode airs in 4 days</p>
+              </a>
+            </span>
+          </div>
 
           <div class="clear"></div>
 
