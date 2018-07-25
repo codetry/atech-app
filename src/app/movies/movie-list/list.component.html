@@ -72,23 +72,19 @@
       <section class="index tv">
         <h2><a href="#">Na TV</a></h2>
 
-        <div class="column">
-        <!-- <div class="column" *ngFor="let movie of response"> -->
-
-          <!-- {{movie.title}}
-          {{response}}
-          {{results}} -->
+        <!-- <div class="column"> -->
+        <div class="column" *ngFor="let movie of movies">
 
           <div class="info first">
-            <!-- <a [routerLink]="['/movie', movie.id]"> -->
-            <a href="./movie/details.component.html">
+            <a [routerLink]="['/movie', movie.id]">
+            <!-- <a href="#"> -->
               <img class="backdrop lazyload fade" data-sizes="auto"
               src="../assets/qYTIuJJ7fIehicAt3bl0vW70Sq6.jpg"
               data-src="../assets/qYTIuJJ7fIehicAt3bl0vW70Sq6.jpg"
               data-srcset="../assets/qYTIuJJ7fIehicAt3bl0vW70Sq6.jpg 1x, ../assets/qYTIuJJ7fIehicAt3bl0vW70Sq6.jpg 2x" alt="The 100">
             </a>
-            <span>
 
+            <span>
               <a href="#">
                 <img class="poster lazyload fade" data-sizes="auto"
                 src="../assets/cfhfcEt4bOXuVZkTC0nNBpqqiWb.jpg"
@@ -98,7 +94,7 @@
 
               <div class="content">
                 <a class="text" href="#">
-                  <h3>The 100</h3>
+                  <h3>Os 100</h3>
                 </a>
                 <a class="text" alt="Season 5, Episode 11" title="Season 5, Episode 11" href="#">
                   <p>New episode airs in 3 days</p>

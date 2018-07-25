@@ -15,6 +15,7 @@ import 'rxjs/add/operator/catch';;
 export class MovieService {
 
   private baseURL: string;
+  private baseURLTV: string;
   private popularURL: string;
   private latestURL: string;
 
@@ -23,24 +24,38 @@ export class MovieService {
     private _util: UtilService
   ) {
     this.baseURL = `${this._util.theMovieDbURL}/movie`;
+    this.baseURLTV = `${this._util.theMovieDbURLTV}/tv`;
     this.popularURL = "/popular";
     this.latestURL = "/latest";
   }
 
-  movies(page: number = 1, type: string = "all"): Observable<Movie[]> {
+  movies(page: number = 1, type: string = "all", lang: string = "pt-br"): Observable<Movie[]> {
     let url: string = `${this.baseURL}`;
     if (type !== "all") {
       url += this[`${type}URL`];
     }
     url += `?api_key=${this._util.apiKey}`;
     url += `&page=${page}`;
-    // function (response) {
-    //   respone = this._http.get(url);
-    //   return response;
-    // }
-    return this._http.get(url).map(response => {
-      return response;
-      console.log("res" ,response);
+    url += `&language=${lang}`;
+
+    return this._http.get<any>(url).map(response => {
+      return response.results as Movie[] || [];
+    }).catch(err => {
+      return of(null);
+    });
+  }
+  moviesTv(page: number = 1, type: string = "all", lang: string = "pt-br", tv_id: number = 550): Observable<Movie[]> {
+    let urlTv: string = `${this.baseURL}`;
+    if (type !== "popular") {
+      urlTv += this[`${type}URL`];
+    }
+    urlTv += `/${tv_id}`;
+    urlTv += `?api_key=${this._util.apiKey}`;
+    urlTv += `&page=${page}`;
+    urlTv += `&language=${lang}`;
+
+    return this._http.get<any>(urlTv).map(response => {
+      return response.results as Movie[] || [];
     }).catch(err => {
       return of(null);
     });

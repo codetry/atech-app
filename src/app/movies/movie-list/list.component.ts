@@ -14,6 +14,7 @@ import { UtilService } from "../../shared/services/util.service";
 export class MovieListComponent implements OnInit, OnDestroy {
 
   private movies: Movie[] = [];
+  private moviesTv: Movie[] = [];
   private sub1: Subscription;
   constructor(
     private _movie: MovieService,
@@ -22,6 +23,7 @@ export class MovieListComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.getMovies();
+    this.getMoviesTv();
   }
 
   ngOnDestroy(): void {
@@ -32,6 +34,13 @@ export class MovieListComponent implements OnInit, OnDestroy {
     this.sub1 = this._movie.movies(page, "popular").subscribe((movies: Movie[]) => {
       if (movies) {
         this.movies.push(...movies);
+      }
+    });
+  }
+  getMoviesTv(page: number = 1): void {
+    this.sub1 = this._movie.moviesTv(page, "popular").subscribe((moviesTv: Movie[]) => {
+      if (moviesTv) {
+        this.moviesTv.push(...moviesTv);
       }
     });
   }
