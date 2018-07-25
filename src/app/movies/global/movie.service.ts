@@ -44,12 +44,12 @@ export class MovieService {
       return of(null);
     });
   }
-  moviesTv(page: number = 1, type: string = "all", lang: string = "pt-br", tv_id: number = 550): Observable<Movie[]> {
-    let urlTv: string = `${this.baseURL}`;
-    if (type !== "popular") {
+  moviesTv(page: number = 1, type: string = "all", lang: string = "pt-br"): Observable<Movie[]> {
+    let urlTv: string = `${this.baseURLTV}`;
+    if (type !== "all") {
       urlTv += this[`${type}URL`];
     }
-    urlTv += `/${tv_id}`;
+    // urlTv += `/${tv_id}`;
     urlTv += `?api_key=${this._util.apiKey}`;
     urlTv += `&page=${page}`;
     urlTv += `&language=${lang}`;

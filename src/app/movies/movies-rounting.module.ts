@@ -12,7 +12,7 @@ import { MovieDetailsComponent } from "./movie/details.component";
   imports: [
     RouterModule.forRoot([
       {
-        path: "movies",
+        path: "",
         component: MovieListComponent,
       },
       {

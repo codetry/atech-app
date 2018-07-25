@@ -37,11 +37,13 @@ export class MovieListComponent implements OnInit, OnDestroy {
       }
     });
   }
+
   getMoviesTv(page: number = 1): void {
     this.sub1 = this._movie.moviesTv(page, "popular").subscribe((moviesTv: Movie[]) => {
       if (moviesTv) {
         this.moviesTv.push(...moviesTv);
       }
+      console.log("moviesTv", moviesTv);
     });
   }
 

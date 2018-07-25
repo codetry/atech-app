@@ -75,65 +75,63 @@
         <!-- <div class="column"> -->
         <div class="column">
 
-          <div class="info first" *ngFor="let movie of movies | slice:0:1;">
-            <a [routerLink]="['/movie', movie.id]">
-            <!-- <a href="#"> -->
+          <div class="info first" *ngFor="let tv of moviesTv | slice:0:1;">
+            <a [routerLink]="['/tv', tv.id]">
               <img class="backdrop lazyload fade" data-sizes="auto"
-              src="../assets/qYTIuJJ7fIehicAt3bl0vW70Sq6.jpg"
-              data-src="../assets/qYTIuJJ7fIehicAt3bl0vW70Sq6.jpg"
-              data-srcset="../assets/qYTIuJJ7fIehicAt3bl0vW70Sq6.jpg 1x, ../assets/qYTIuJJ7fIehicAt3bl0vW70Sq6.jpg 2x" alt="The 100">
+              src="https://image.tmdb.org/t/p/w500_and_h282_face{{tv.poster_path}}"
+              data-src="https://image.tmdb.org/t/p/w500_and_h282_face{{tv.poster_path}}"
+              data-srcset="https://image.tmdb.org/t/p/w500_and_h282_face{{tv.poster_path}} 1x, https://image.tmdb.org/t/p/w500_and_h282_face{{tv.poster_path}} 2x" alt="{{tv.name}}">
             </a>
 
             <span>
-              <a href="#">
+              <a [routerLink]="['/tv', tv.id]">
                 <img class="poster lazyload fade" data-sizes="auto"
-                src="../assets/cfhfcEt4bOXuVZkTC0nNBpqqiWb.jpg"
-                data-src="../assets/cfhfcEt4bOXuVZkTC0nNBpqqiWb.jpg"
-                data-srcset="../assets/cfhfcEt4bOXuVZkTC0nNBpqqiWb.jpg 1x, ../assets/cfhfcEt4bOXuVZkTC0nNBpqqiWb.jpg 2x" alt="The 100">
+                src="https://image.tmdb.org/t/p/w58_and_h87_bestv2{{tv.poster_path}}"
+                data-src="https://image.tmdb.org/t/p/w58_and_h87_bestv2{{tv.poster_path}}"
+                data-srcset="https://image.tmdb.org/t/p/w58_and_h87_bestv2{{tv.poster_path}} 1x, https://image.tmdb.org/t/p/w58_and_h87_bestv2{{tv.poster_path}} 2x" alt="The 100">
               </a>
 
               <div class="content">
-                <a class="text" href="#">
-                  <h3>{{movie.title}}</h3>
+                <a class="text" [routerLink]="['/tv', tv.id]">
+                  <h3>{{tv.name}}</h3>
                 </a>
-                <a class="text" alt="Season 5, Episode 11" title="Season 5, Episode 11" href="#">
-                  <p>New episode airs in 3 days</p>
+                <a class="text" alt="Season 5, Episode 11" title="Season 5, Episode 11" [routerLink]="['/tv', tv.id]">
+                  <p>{{tv.overview}}</p>
                 </a>
               </div>
             </span>
           </div>
 
-          <div class="info second" *ngFor="let movie of movies | slice:0:1;">
-            <a href="#">
+          <div class="info second" *ngFor="let tv of moviesTv | slice:1:2;">
+            <a [routerLink]="['/tv', tv.id]">
               <img class="backdrop lazyload fade" data-sizes="auto"
-              src="../assets/7gRvLvHH78YAdchOghNpH2EysJ2.jpg"
-              data-src="../assets/7gRvLvHH78YAdchOghNpH2EysJ2.jpg"
-              data-srcset="../assets/7gRvLvHH78YAdchOghNpH2EysJ2.jpg 1x,
-              ../assets/7gRvLvHH78YAdchOghNpH2EysJ2.jpg 2x" alt="Defesa à Medida">
+              src="https://image.tmdb.org/t/p/w250_and_h141_face{{tv.backdrop_path}}"
+              data-src="https://image.tmdb.org/t/p/w250_and_h141_face{{tv.backdrop_path}}"
+              data-srcset="https://image.tmdb.org/t/p/w250_and_h141_face{{tv.backdrop_path}} 1x, https://image.tmdb.org/t/p/w250_and_h141_face{{tv.backdrop_path}} 2x" alt="{{tv.name}}">
             </a>
             <span>
-              <a class="text" href="#">
-                <h3>{{movie.title}}</h3>
+              <a class="text" [routerLink]="['/tv', tv.id]">
+                <h3>{{tv.name}}</h3>
               </a>
-              <a class="text" alt="Season 8, Episode 2" title="Season 8, Episode 2" href="#">
-                <p>New episode airs in 4 days</p>
+              <a class="text" alt="Season 8, Episode 2" title="Season 8, Episode 2" [routerLink]="['/tv', tv.id]">
+                <p>{{tv.overview}}</p>
               </a>
             </span>
           </div>
 
-          <div class="info third" *ngFor="let movie of movies | slice:0:1;">
-            <a href="#">
+          <div class="info third" *ngFor="let tv of moviesTv | slice:2:3;">
+            <a [routerLink]="['/tv', tv.id]">
               <img class="backdrop lazyload fade" data-sizes="auto"
-              src="../assets/7crHhmTybBvGQ3Y96j4kdQ89ldY.jpg"
-              data-src="../assets/7crHhmTybBvGQ3Y96j4kdQ89ldY.jpg"
-              data-srcset="../assets/7crHhmTybBvGQ3Y96j4kdQ89ldY.jpg 1x, ../assets/7crHhmTybBvGQ3Y96j4kdQ89ldY.jpg 2x" alt="The Originals">
+              src="https://image.tmdb.org/t/p/w250_and_h141_face{{tv.backdrop_path}}"
+              data-src="https://image.tmdb.org/t/p/w250_and_h141_face{{tv.backdrop_path}}"
+              data-srcset="https://image.tmdb.org/t/p/w250_and_h141_face{{tv.backdrop_path}} 1x, https://image.tmdb.org/t/p/w250_and_h141_face{{tv.backdrop_path}} 2x" alt="{{tv.name}}">
             </a>
             <span>
-              <a class="text" href="#">
-                <h3>{{movie.title}}</h3>
+              <a class="text" [routerLink]="['/tv', tv.id]">
+                <h3>{{tv.name}}</h3>
               </a>
-              <a class="text" alt="Season 5, Episode 12" title="Season 5, Episode 12" href="#">
-                <p>New episode airs in 4 days</p>
+              <a class="text" alt="Season 5, Episode 12" title="Season 5, Episode 12" [routerLink]="['/tv', tv.id]">
+                <p>{{tv.overview}}</p>
               </a>
             </span>
           </div>
@@ -150,62 +148,66 @@
 
         <div class="column">
 
-          <div class="info second">
-            <a href="#">
+          <div class="info second" *ngFor="let movie of movies | slice:1:2;">
+            <a [routerLink]="['/movie', movie.id]">
               <img class="backdrop lazyload fade" data-sizes="auto"
-              src="../assets/6P3c80EOm7BodndGBUAJHHsHKrp.jpg"
-              data-src="../assets/6P3c80EOm7BodndGBUAJHHsHKrp.jpg"
-              data-srcset="../assets/6P3c80EOm7BodndGBUAJHHsHKrp.jpg 1x, ../assets/6P3c80EOm7BodndGBUAJHHsHKrp.jpg 2x" alt="Homem-Formiga e Vespa">
+              src="https://image.tmdb.org/t/p/w250_and_h141_face{{movie.backdrop_path}}"
+              data-src="https://image.tmdb.org/t/p/w250_and_h141_face{{movie.backdrop_path}}"
+              data-srcset="https://image.tmdb.org/t/p/w250_and_h141_face{{movie.backdrop_path}} 1x, https://image.tmdb.org/t/p/w250_and_h141_face{{movie.backdrop_path}} 2x" alt="{{movie.title}}">
             </a>
             <span>
-              <a class="text" href="#">
-                <h3>Homem-Formiga e Vespa</h3>
-                <p>Evangeline Lilly, Paul Rudd</p>
+              <a class="text" [routerLink]="['/movie', movie.id]">
+                <h3>{{movie.title}}</h3>
+              </a>
+              <a class="text" alt="Season 8, Episode 2" title="Season 8, Episode 2" [routerLink]="['/movie', movie.id]">
+                <p>{{movie.overview}}</p>
               </a>
             </span>
           </div>
 
-            <div class="info third">
-              <a href="#">
+          <div class="info third" *ngFor="let movie of movies | slice:3:4;">
+            <a [routerLink]="['/movie', movie.id]">
+              <img class="backdrop lazyload fade" data-sizes="auto"
+              src="https://image.tmdb.org/t/p/w250_and_h141_face{{movie.backdrop_path}}"
+              data-src="https://image.tmdb.org/t/p/w250_and_h141_face{{movie.backdrop_path}}"
+              data-srcset="https://image.tmdb.org/t/p/w250_and_h141_face{{movie.backdrop_path}} 1x, https://image.tmdb.org/t/p/w250_and_h141_face{{movie.backdrop_path}} 2x" alt="{{movie.title}}">
+            </a>
+            <span>
+              <a class="text" [routerLink]="['/movie', movie.id]">
+                <h3>{{movie.title}}</h3>
+              </a>
+              <a class="text" alt="Season 8, Episode 2" title="Season 8, Episode 2" [routerLink]="['/movie', movie.id]">
+                <p>{{movie.overview}}</p>
+              </a>
+            </span>
+          </div>
+
+          <div class="clear"></div>
+
+          <div class="info first" *ngFor="let movie of movies | slice:0:1;">
+              <a [routerLink]="['/movie', movie.id]">
                 <img class="backdrop lazyload fade" data-sizes="auto"
-                src="../assets/mabuNsGJgRuCTuGqjFkWe1xdu19.jpg"
-                data-src="../assets/mabuNsGJgRuCTuGqjFkWe1xdu19.jpg"
-                data-srcset="h../assets/mabuNsGJgRuCTuGqjFkWe1xdu19.jpg 1x, ../assets/mabuNsGJgRuCTuGqjFkWe1xdu19.jpg 2x" alt="Os Incríveis 2">
+                src="https://image.tmdb.org/t/p/w500_and_h282_face{{movie.poster_path}}"
+                data-src="https://image.tmdb.org/t/p/w500_and_h282_face{{movie.poster_path}}"
+                data-srcset="https://image.tmdb.org/t/p/w500_and_h282_face{{movie.poster_path}} 1x, https://image.tmdb.org/t/p/w500_and_h282_face{{movie.poster_path}} 2x" alt="{{movie.title}}">
               </a>
               <span>
-                <a class="text" href="#">
-                  <h3>Os Incríveis 2</h3>
-                  <p>Craig T. Nelson, Holly Hunter</p>
+
+                <a [routerLink]="['/movie', movie.id]">
+                  <img class="poster lazyload fade" data-sizes="auto"
+                  src="https://image.tmdb.org/t/p/w58_and_h87_bestv2{{movie.poster_path}}"
+                  data-src="https://image.tmdb.org/t/p/w58_and_h87_bestv2{{movie.poster_path}}"
+                  data-srcset="https://image.tmdb.org/t/p/w58_and_h87_bestv2{{movie.poster_path}} 1x, https://image.tmdb.org/t/p/w58_and_h87_bestv2{{movie.poster_path}} 2x" alt="{{movie.title}}">
                 </a>
+
+                <div class="content">
+                  <a class="text" [routerLink]="['/movie', movie.id]">
+                    <h3>{{movie.title}}</h3>
+                    <p>{{movie.overview}}</p>
+                  </a>
+                </div>
               </span>
             </div>
-
-            <div class="clear"></div>
-
-            <div class="info first">
-                <a href="#">
-                  <img class="backdrop lazyload fade" data-sizes="auto"
-                  src="../assets/gBmrsugfWpiXRh13Vo3j0WW55qD.jpg"
-                  data-src="../assets/gBmrsugfWpiXRh13Vo3j0WW55qD.jpg"
-                  data-srcset="../assets/gBmrsugfWpiXRh13Vo3j0WW55qD.jpg 1x, ../assets/gBmrsugfWpiXRh13Vo3j0WW55qD.jpg 2x" alt="Mundo Jurássico: Reino Caído">
-                </a>
-                <span>
-
-                <a href="#">
-                  <img class="poster lazyload fade" data-sizes="auto"
-                  src="../assets/5PWRDsozYR1VeExrFLqZ8Qpw07m.jpg"
-                  data-src="../assets/5PWRDsozYR1VeExrFLqZ8Qpw07m.jpg"
-                  data-srcset="../assets/5PWRDsozYR1VeExrFLqZ8Qpw07m.jpg 1x, ../assets/5PWRDsozYR1VeExrFLqZ8Qpw07m.jpg 2x" alt="Mundo Jurássico: Reino Caído">
-                </a>
-
-                  <div class="content">
-                    <a class="text" href="#">
-                      <h3>Mundo Jurássico: Reino Caído</h3>
-                      <p>Bryce Dallas Howard, Chris Pratt, Isabella Sermon</p>
-                    </a>
-                  </div>
-                </span>
-              </div>
 
         </div>
       </section>

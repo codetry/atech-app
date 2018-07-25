@@ -7,7 +7,7 @@ import { Injectable } from "@angular/core";
 @Injectable()
 export class UtilService {
 
-  readonly theMovieDbURLTV: string = "https://api.themoviedb.org/3";
+  readonly theMovieDbURLTV: string = "https://api.themoviedb.org/4";
   readonly theMovieDbURL: string = "https://api.themoviedb.org/3";
   readonly posterBaseURL: string = "http://image.tmdb.org/t/p";
   readonly apiKey: string = "af1e8cec53fe031da2e05faeaee55138";
